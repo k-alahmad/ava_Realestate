@@ -10,7 +10,7 @@ export default function Layout({ children }) {
 			<Head>
 				<title>Ava Real Estate</title>
 			</Head>
-			<Box maxWidth='1280px' m='auto'>
+			<Box maxWidth='1920px' m='auto'>
 				<header>
 					<Navbar />
 				</header>

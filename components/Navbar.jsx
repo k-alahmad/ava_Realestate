@@ -9,15 +9,21 @@ import {
 	Box,
 	Spacer,
 } from "@chakra-ui/react";
+import Image from "next/image";
 import { FcMenu, FcHome, FcAbout } from "react-icons/fc";
 import { BsSearch } from "react-icons/bs";
 import { FiKey } from "react-icons/fi";
-
+import Logo from "../assets/images/Logo.png";
 const Navbar = () => (
-	<Flex p='2' borderBottom='2px' borderColor='gray.200'>
-		<Box fontSize='3xl' color='blue.400' fontWeight='bold'>
-			<Link href='/' paddingleft='2'>
-				Ava Real Estate
+	<Flex
+		p='2'
+		borderBottom='2px'
+		borderColor='gray.200'
+		backgroundColor={"blackAlpha.900"}
+	>
+		<Box>
+			<Link href='/'>
+				<Image src={Logo} alt='Logo' width={60} height={0} />
 			</Link>
 		</Box>
 		<Spacer />

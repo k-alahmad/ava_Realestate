@@ -4,7 +4,7 @@ import { Flex, Box, Text, Button } from "@chakra-ui/react";
 
 import { baseUrl, fetchApi } from "@/utils/fetchApi";
 import Property from "@/components/Property";
-
+import coverPhoto from "../assets/images/cover.jpg";
 const Banner = ({
 	purpose,
 	title1,
@@ -40,7 +40,10 @@ const Banner = ({
 
 export default function Home({ propertyForSale, propertyForRent }) {
 	return (
-		<Box>
+		<Box width={"full"}>
+			<Flex p={2}>
+				<Image src={coverPhoto} alt='Cover' width={"full"} />
+			</Flex>
 			<Banner
 				purpose='RENT A HOME'
 				title1='Rental Homes for'
@@ -48,7 +51,7 @@ export default function Home({ propertyForSale, propertyForRent }) {
 				desc1=' Explore from Apartments, builder floors, villas'
 				desc2='and more'
 				buttonText='Explore Renting'
-				linkName='/search>purpose=for-rent'
+				linkName='/search?purpose=for-rent'
 				imageUrl='https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4'
 			/>
 			<Flex flexWrap='wrap'>
